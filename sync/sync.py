@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 # Copyright (C) 2016 Simon Shields
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
