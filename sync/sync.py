@@ -19,6 +19,11 @@ import os
 import subprocess
 import sys
 
+if sys.version_info.major > 2:
+    bytes_dec = lambda a: a.decode('utf-8')
+else:
+    bytes_dec = lambda a: a
+
 import praw
 if 'IS_TRAVIS' not in os.environ:
     try:
@@ -46,8 +51,9 @@ skipres = False
 if '--nores' in sys.argv or '-n' in sys.argv:
     skipres = True
 
+css = reddit.subreddit(sub).stylesheet
+
 if not skipres:
-    css = reddit.subreddit(sub).stylesheet
     print('Uploading resources...')
     for f in os.listdir('res'):
         print('Uploading %s...'%f, end=' ')
@@ -56,8 +62,8 @@ if not skipres:
 else:
     print('Skipping resource upload.')
 try:
-    rev = subprocess.check_output('git rev-parse HEAD', shell=True).strip()
-    dirty = subprocess.check_output('git diff HEAD', shell=True).strip() != ''
+    rev = bytes_dec(subprocess.check_output('git rev-parse HEAD', shell=True)).strip()
+    dirty = bytes_dec(subprocess.check_output('git diff HEAD', shell=True).strip()) != ''
 except subprocess.CalledProcessError:
     rev = 'unknown'
     dirty = False
