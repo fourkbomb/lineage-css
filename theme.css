@@ -74,3 +74,14 @@ body:not(.search-page) .submit > .morelink{top:540px}
     color: #24a0ed;
 }
 /* End Addon */
+
+/* Flairs */
+.flair {
+	border: 0;
+	padding: 0;
+}
+
+.flair-contributor::before {
+	content: "Lineage Team Member";
+	font-weight: bold;
+}
