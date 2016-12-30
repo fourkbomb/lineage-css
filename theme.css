@@ -85,3 +85,8 @@ body:not(.search-page) .submit > .morelink{top:540px}
 	content: "Lineage Team Member";
 	font-weight: bold;
 }
+/* End Flairs */
+
+/* RES Night Mode */
+.res-nightmode .footer-parent{background:url(%%footer-night%%) 50% 0 / cover no-repeat}
+.res-nightmode #header{background:url(%%headerimg%%) 50% 50% / cover no-repeat}
