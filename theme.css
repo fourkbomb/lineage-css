@@ -57,11 +57,11 @@ body:not(.search-page) .submit > .morelink{top:540px}
 }
 
     .morelink:hover, .side .titlebox .md h3 a:hover, .btn:hover, body button:hover {
-        background-color: #00695C;
+        background-color: #009688;
     }
 
     .morelink:active, .side .titlebox .md h3 a:active, .btn:active, body button:active {
-        background-color: #009688;
+        background-color: #00695C;
     }
 
 /* Links */
