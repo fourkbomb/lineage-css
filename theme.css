@@ -90,3 +90,10 @@ body:not(.search-page) .submit > .morelink{top:540px}
 /* RES Night Mode */
 .res-nightmode .footer-parent{background:url(%%footer-night%%) 50% 0 / cover no-repeat}
 .res-nightmode #header{background:url(%%headerimg%%) 50% 50% / cover no-repeat}
+/* End RES Night Mode */
+
+/* Adjustment: Teal page name on white header image */
+#header .pagename a {
+    color: #167c80;
+}
+/* End Adjustmeant*/
